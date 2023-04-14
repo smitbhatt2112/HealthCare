@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Add DiseaseDevice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Data;
+@model HealthCare.Areas.DiseaseDevice.Models.DiseaseDeviceModel
+
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <!-- BEGIN PAGE TITLE-->
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="row">
+                    <div class="caption font-green-haze col-md-10">
+                        <i class="icon-plus font-green"></i>
+                        <span class="caption-subject bold uppercase"> Add Disease to Device</span>
+                    </div>
+                    <div class="caption font-green-haze" style="float:right">
+                        <a class="btn btn-success" asp-action="Index">Back to List</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <form role="form" class="form-horizontal" asp-area="DiseaseDevice" asp-controller="DiseaseDevice" asp-action="Save" enctype="multipart/form-data">
+                @Html.HiddenFor(x=>x.AssignID)
+                <div class="form-body">
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*Device Name</label>
+                        <div class="col-md-10">
+                            <select class="form-control edited" id="form_control_1" asp-for="DeviceID" asp-items="@(new SelectList(@ViewBag.DeviceList,"DeviceID","DeviceName"))">
+                                <option class="form-group">Select Doctor</option>
+                            </select>
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <div class="form-actions">
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*Diseasse Name</label>
+                        <div class="col-md-10">
+                            <select class="form-control edited" id="form_control_1" asp-for="DiseaseID" asp-items="@(new SelectList(@ViewBag.DiseaseList,"DiseaseID","DiseaseName"))">
+                                <option class="form-group">Select Disease</option>
+                            </select>
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" class="btn btn-success" />
+                            <a class="btn btn-danger" asp-action="Index">Cancel</a>
+                            <br />
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- END CONTENT BODY -->
+
+
+<!-- END CONTENT -->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+
+
+

@@ -1,0 +1,177 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HealthCare
+build_property.RootNamespace = HealthCare
+build_property.ProjectDir = F:\.net project\HealthCare\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\.net project\HealthCare
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/.net project/HealthCare/areas/AssignDisease/Views/AssignDisease/AssignAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQXNzaWduRGlzZWFzZVxWaWV3c1xBc3NpZ25EaXNlYXNlXEFzc2lnbkFkZEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/AssignDisease/Views/AssignDisease/AssignList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQXNzaWduRGlzZWFzZVxWaWV3c1xBc3NpZ25EaXNlYXNlXEFzc2lnbkxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/AssignDisease/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQXNzaWduRGlzZWFzZVxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Client/Views/Client/Device.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQ2xpZW50XFZpZXdzXENsaWVudFxEZXZpY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Client/Views/Client/Disease.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQ2xpZW50XFZpZXdzXENsaWVudFxEaXNlYXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Client/Views/Client/Doctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQ2xpZW50XFZpZXdzXENsaWVudFxEb2N0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Client/Views/Client/Homepage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQ2xpZW50XFZpZXdzXENsaWVudFxIb21lcGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Client/Views/Client/Patient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQ2xpZW50XFZpZXdzXENsaWVudFxQYXRpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Client/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQ2xpZW50XFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Devices/Views/Devices/DeviceAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcRGV2aWNlc1xWaWV3c1xEZXZpY2VzXERldmljZUFkZEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Devices/Views/Devices/DeviceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcRGV2aWNlc1xWaWV3c1xEZXZpY2VzXERldmljZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Devices/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcRGV2aWNlc1xWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/DiseaseDevice/Views/DiseaseDevice/DiseaseDeviceAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcRGlzZWFzZURldmljZVxWaWV3c1xEaXNlYXNlRGV2aWNlXERpc2Vhc2VEZXZpY2VBZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/DiseaseDevice/Views/DiseaseDevice/DiseaseDeviceList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcRGlzZWFzZURldmljZVxWaWV3c1xEaXNlYXNlRGV2aWNlXERpc2Vhc2VEZXZpY2VMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/DiseaseDevice/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcRGlzZWFzZURldmljZVxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Diseases/Views/Diseases/DiseaseAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcRGlzZWFzZXNcVmlld3NcRGlzZWFzZXNcRGlzZWFzZUFkZEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Diseases/Views/Diseases/DiseaseList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcRGlzZWFzZXNcVmlld3NcRGlzZWFzZXNcRGlzZWFzZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/Diseases/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcRGlzZWFzZXNcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/SelectDisease/Views/SelectDisease/SelectDiseaseAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcU2VsZWN0RGlzZWFzZVxWaWV3c1xTZWxlY3REaXNlYXNlXFNlbGVjdERpc2Vhc2VBZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/SelectDisease/Views/SelectDisease/SelectDiseaseList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcU2VsZWN0RGlzZWFzZVxWaWV3c1xTZWxlY3REaXNlYXNlXFNlbGVjdERpc2Vhc2VMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/SelectDisease/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcU2VsZWN0RGlzZWFzZVxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/US_Doctor/Views/US_Doctor/DoctorAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcVVNfRG9jdG9yXFZpZXdzXFVTX0RvY3RvclxEb2N0b3JBZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/US_Doctor/Views/US_Doctor/DoctorList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcVVNfRG9jdG9yXFZpZXdzXFVTX0RvY3RvclxEb2N0b3JMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/US_Doctor/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcVVNfRG9jdG9yXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/US_Patient/Views/US_Patient/PatientAddEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcVVNfUGF0aWVudFxWaWV3c1xVU19QYXRpZW50XFBhdGllbnRBZGRFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/US_Patient/Views/US_Patient/PatientList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcVVNfUGF0aWVudFxWaWV3c1xVU19QYXRpZW50XFBhdGllbnRMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/areas/US_Patient/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcVVNfUGF0aWVudFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/Client/_Layout_Client.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XF9MYXlvdXRfQ2xpZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/Login/_Layout_Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cX0xheW91dF9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/User_Master/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcl9NYXN0ZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/User_Master/RegisterUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcl9NYXN0ZXJcUmVnaXN0ZXJVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/User_Master/User_Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcl9NYXN0ZXJcVXNlcl9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/User_Master/User_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcl9NYXN0ZXJcVXNlcl9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/.net project/HealthCare/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1enre5tcio

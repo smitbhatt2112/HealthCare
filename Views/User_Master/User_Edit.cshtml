@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "User Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model HealthCare.Models.User_MasterModel
+
+<!-- BEGIN CONTENT -->
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <!-- BEGIN PAGE TITLE-->
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+
+
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="row">
+                    <div class="caption font-green-haze col-md-10">
+                        <i class="icon-plus font-green"></i>
+                        <span class="caption-subject bold uppercase">User</span>
+                    </div>
+                    <div class="caption font-green-haze" style="float:right">
+                        <a class="btn btn-success" asp-action="Index">Back to List</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="portlet-body form">
+                @*<h3>@TempData["CountryInsertMsg"]</h3>*@
+
+                <form role="form" class="form-horizontal" asp-controller="User_Master" asp-action="Save" enctype="multipart/form-data">
+                    @Html.HiddenFor(x=>x.UserID)
+
+                    <div class="form-body">
+
+                        <div class="form-group form-md-line-input">
+                            <label class="col-md-2 control-label" for="form_control_1">*User Name</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control " id="form_control_1" asp-for="UserName" placeholder="Enter User Name">
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                                <div class="form-control-focus"> </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-md-line-input">
+                            <label class="col-md-2 control-label" for="form_control_1">*Password</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control " id="form_control_1" asp-for="Password" placeholder="Enter Password">
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                                <div class="form-control-focus"> </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-10 ">
+                                <input type="submit" class="btn btn-success" />
+                                <a class="btn btn-danger" asp-action="UserDetails">Cancel</a>
+
+                                <br />
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    <!-- END CONTENT BODY -->
+</div>
+<!-- END CONTENT -->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

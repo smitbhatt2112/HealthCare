@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Views/Client/_Layout_Client.cshtml";
+}
+@using HealthCare.BAL;
+@using System.Data;
+@model DataTable
+<div class="callout-info">
+    @{
+        string fieldValue = Model.Rows[0][7].ToString();
+    }
+    <div class="callout-info">
+        <div class="jumbotron alert alert-success">
+            <h2> hey  <h1>@CV.UserName()</h1> Do You Want to Register As Patient of @fieldValue</h2>
+            <p><a asp-area="Client" asp-route-DiseaseID="@Convert.ToInt32(Model.Rows[0][1])" asp-controller="Client" asp-action="Doctor" class="btn btn-primary btn-lg" role="button">Register</a></p>
+        </div>
+   </div>
+    
+</div>
+<table class="table table-striped table-hover table-bordered text-center" id="sample_editable_1">
+    <thead>
+        <tr class="text-center">
+            <th class="text-center"> No </th>
+            <th class="text-center"> Device Name  </th>
+            <th class="text-center"> Device Brand </th>
+            <th class="text-center"> Photo </th>
+            <th class="text-center"> Price </th>
+            <th class="text-center"> Description </th>
+        </tr>
+    </thead>
+    <tbody id="myTable">
+        @{
+            int i = 1;
+
+        }
+        @foreach (DataRow dr in Model.Rows)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@dr["DeviceName"]</td>
+                <td>@dr["DeviceBrand"]</td>
+                <td><img src="@Url.Content(dr["PhotoPath"].ToString())" style="height:100px;width:50px" /></td>
+                <td>@dr["Price"]</td>
+                <td>@dr["Description"]</td>
+                <td>
+                    <form method="post" asp-area="Client" asp-controller="Client" asp-action="Cart">
+                        <!--fisrt input tag int value will be pass-->
+                        <input type="hidden" name="DeviceID" value="@Convert.ToInt32(dr["DeviceID"])" />
+                        <button type="submit" class="btn btn-info">Add to cart</button>
+
+                    </form>
+                </td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>

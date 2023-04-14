@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Client/_Layout_Client.cshtml";
+}
+@using System.Data;
+@model DataTable
+
+@if (TempData["AlertMsg"] != null || TempData["insertalert"] != null)
+ {
+   <h3 class="alert text-success">@TempData["AlertMsg"]</h3>
+   <h3 class="alert text-success">@TempData["insertalert"]</h3>
+ }
+@{
+
+    try
+    {
+             int assign = @Convert.ToInt32(Model.Rows[0][0]);
+                                
+        <table class="table table-striped table-hover table-bordered text-center" id="sample_editable_1">
+            <thead>
+                <tr class="text-center">
+                    <th class="text-center"> No </th>
+                    <th class="text-center"> patient Name </th>
+                    <th class="text-center"> Disease assigned </th>
+                    <th class="text-center"> doctor </th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                @{
+                    int i = 1;
+
+                }
+                @foreach (DataRow dr in Model.Rows)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@dr["UserName"]</td>
+                        <td>@dr["diseaseName"]</td>
+                        <td>@dr["DoctorName"]</td>
+
+                        <td>
+                            <form method="post" asp-area="Client" asp-controller="Client" asp-action="Patient">
+                                <!--fisrt input tag int value will be pass-->
+
+                                <input type="hidden" name="DoctorID" value="@Convert.ToInt32(dr["DoctorID"])" />
+                                <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure you want appointment of DR.@dr["DoctorName"] ') ">Appoint Doctor</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="post" asp-area="Client" asp-controller="Client" asp-action="DeleteHealthcare">
+                                <!--fisrt input tag int value will be pass-->
+                                <input type="hidden" name="AssignID" value="@Convert.ToInt32(dr["AssignID"])" />
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want Delete your assignment as patient of @dr["diseaseName"] with DR.@dr["DoctorName"] ') ">delete my Healthcare</button>
+                            </form>
+                        </td>
+
+                    </tr>
+                    i++;
+                }
+            </tbody>
+        </table>
+        TempData["AlertMsg"] = null;
+        TempData["insertalert"] = null;
+    }
+
+    catch
+    {
+        <div class="alert alert-info">
+        <h1>You haven't assigned anything lately</h1>
+        </div>
+    }
+}
+
+
+
+    

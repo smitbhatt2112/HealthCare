@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Client/_Layout_Client.cshtml";
+}
+@using System.Data;
+@model DataTable
+
+<table class="table table-striped table-hover table-bordered text-center" id="sample_editable_1">
+    <thead>
+        <tr class="text-center">
+            <th class="text-center"> No </th>
+            <th class="text-center"> Doctor Name </th>
+            <th class="text-center"> Description </th>
+            <th class="text-center"> Email </th>
+            <th class="text-center"> PhoneNumber </th>
+            <th class="text-center"> OfficeAddress </th>
+        </tr>
+    </thead>
+    <tbody id="myTable">
+        @{
+            int i = 1;
+
+        }
+        @foreach (DataRow dr in Model.Rows)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@dr["DoctorName"]</td>
+                <td>@dr["Description"]</td>
+                <td>@dr["Email"]</td>
+                <td>@dr["PhoneNumber"]</td>
+                <td>@dr["OfficeAddress"]</td>
+                <td>
+                    <form method="post" asp-area="Client" asp-controller="Client" asp-action="PatientInsert">
+                        <!--fisrt input tag int value will be pass-->
+                        <input type="hidden" name="DiseaseID" value="@Convert.ToInt32(dr["DiseaseID"])" />
+                        <input type="hidden" name="DoctorID" value="@Convert.ToInt32(dr["DoctorID"])" />
+                        <button type="submit" class="btn btn-info" onclick="return confirm('Are you sure you want to assign as Patient Of : @dr["DiseaseName"]  with DR.@dr["DoctorName"] ') ">Assign me</button>
+                    </form>
+                </td>
+
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>
+

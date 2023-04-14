@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Patient List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Data;
+@model DataTable
+
+<!-- BEGIN CONTENT -->
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <!-- BEGIN PAGE TITLE-->
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BEGIN EXAMPLE TABLE PORTLET-->
+                <div class="portlet light portlet-fit bordered">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <span class="caption-subject font-red sbold uppercase">
+                                Doctor List
+
+                                @if (TempData["AlertMsg"] != null)
+                                {
+                                    <h3 class="alert text-success">@TempData["AlertMsg"]</h3>
+                                }
+                            </span>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="table-toolbar">
+                            <div class="row">
+                                <div class="col col-md-9">
+                                    <a class="btn btn-success" asp-controller="US_Patient" asp-action="Add">Add Patient</a>
+                                </div>
+                                <br />
+                                <div class="col col-md-3">
+                                    <div id="sample_4_filter" class="dataTables_filter">
+                                        <input type="search" id="myInput" class="form-control form-input border-dark input-medium  rounded-3" placeholder="Search Country..." aria-controls="sample_4">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br />
+                            <table class="table table-striped table-hover table-bordered text-center" id="sample_editable_1">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th class="text-center"> No </th>
+                                        <th class="text-center"> Patient Name </th>
+                                        <th class="text-center"> BirthDate </th>
+                                        <th class="text-center"> Gender  </th>
+                                        <th class="text-center"> Email </th>
+                                        <th class="text-center"> PhoneNumber </th>
+                                        <th class="text-center"> Address </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myTable">
+                                    @{
+                                        int i = 1;
+
+                                    }
+                                    @foreach (DataRow dr in Model.Rows)
+                                    {
+                                        <tr>
+                                            <td>@i</td>
+                                            <td>@dr["PatientName"]</td>
+                                            <td>@Convert.ToDateTime(dr["BirthDate"]).ToString("dd-MM-yyyy")</td>
+                                            <td>@dr["Gender"]</td>
+                                            <td>@dr["Email"]</td>
+                                            <td>@dr["PhoneNumber"]</td>
+                                            <td>@dr["address"]</td>
+                                            <td>
+                                                <a asp-controller="Patient" asp-action="Add" asp-area="US_Patient" asp-route-PatientID="@Convert.ToInt32(dr["Patient_ID"])" class="btn btn-primary">Edit</a>
+                                            </td>
+                                            <td>
+                                                <form method="post" asp-controller="US_Patient" asp-action="Delete">
+                                                    <!--fisrt input tag int value will be pass-->
+                                                    <input type="hidden" name="PatientID" value="@Convert.ToInt32(dr["Patient_ID"])" />
+                                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete : @dr["PatientName"]')">Delete</button>
+
+                                                </form>
+                                            </td>
+
+                                        </tr>
+                                        i++;
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END EXAMPLE TABLE PORTLET-->
+                </div>
+            </div>
+        </div>
+        <!-- END CONTENT BODY -->
+    </div>
+</div>
+<!-- END CONTENT -->
+<!-- END CONTENT -->
+ @section Scripts{
+        <script>
+            $(document).ready(function () {
+                $("#myInput").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable tr").filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+ }

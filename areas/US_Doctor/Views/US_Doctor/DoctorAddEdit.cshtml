@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "Add Doctor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model HealthCare.areas.US_Doctor.Models.DoctorModel
+@using System.Data;
+
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <!-- BEGIN PAGE TITLE-->
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="row">
+                    <div class="caption font-green-haze col-md-10">
+                        <i class="icon-plus font-green"></i>
+                        <span class="caption-subject bold uppercase"> Add Doctor</span>
+                    </div>
+                    <div class="caption font-green-haze" style="float:right">
+                        <a class="btn btn-success" asp-action="Index">Back to List</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <form role="form" class="form-horizontal" asp-area="US_Doctor" asp-controller="US_Doctor" asp-action="Save" enctype="multipart/form-data">
+                @Html.HiddenFor(x=>x.DoctorID)               
+                <div class="form-body">
+                    <div class="form-group form-md-line-input">
+
+                        <label class="col-md-2 control-label" for="form_control_1">*Doctor Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control " id="form_control_1" asp-for="DoctorName" placeholder="Enter Doctor Name" autofocus>
+                            <span asp-validation-for="DoctorName" class="text-danger"></span>
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*Description</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="form_control_1" asp-for="Description" placeholder="Enter Description">
+                            <span asp-validation-for="Description" class="text-danger"></span>
+
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+
+                    
+
+                     <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*Email</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="form_control_1" asp-for="Email" placeholder="Enter Email">
+                            
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+
+                      <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*PhoneNumber</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="form_control_1" asp-for="PhoneNumber" placeholder="Enter PhoneNumber">
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*OfficeAddress</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="form_control_1" asp-for="OfficeAddress" placeholder="Enter OfficeAddress">
+                            <span asp-validation-for="OfficeAddress" class="text-danger"></span>
+
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>                  
+                </div>
+                <br />
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" class="btn btn-success" />
+                            <a class="btn btn-danger" asp-action="Index">Cancel</a>
+                            <br />
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- END CONTENT BODY -->
+</div>
+
+<!-- END CONTENT -->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

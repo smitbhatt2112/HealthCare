@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "Add Patient";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model HealthCare.Areas.US_Patient.Models.PatientModel
+@using System.Data;
+
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <!-- BEGIN PAGE TITLE-->
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="row">
+                    <div class="caption font-green-haze col-md-10">
+                        <i class="icon-plus font-green"></i>
+                        <span class="caption-subject bold uppercase"> Add Patient</span>
+                    </div>
+                    <div class="caption font-green-haze" style="float:right">
+                        <a class="btn btn-success" asp-action="Index">Back to List</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <form role="form" class="form-horizontal" asp-area="US_Patient" asp-controller="US_Patient" asp-action="Save" enctype="multipart/form-data">
+                @Html.HiddenFor(x=>x.PatientID)
+                <div class="form-body">
+                    <div class="form-group form-md-line-input">
+
+                        <label class="col-md-2 control-label" for="form_control_1">*Doctor Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control " id="form_control_1" asp-for="PatientName" placeholder="Enter Patient Name" autofocus>
+                            <span asp-validation-for="PatientName" class="text-danger"></span>
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*Birthdate</label>
+                        <div class="col-md-10">
+                            <input type="date" class="form-control" id="form_control_1" asp-for="Birthdate" placeholder="Enter Birthdate">
+                            <span asp-validation-for="Birthdate" class="text-danger"></span>
+
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*Email</label>
+                        <div class="col-md-10">
+                            <select class="form-control edited" id="form_control_1" asp-for="Gender" asp-items="@(new SelectList(ViewBag.GenderList))">
+                                <option class="form-group">Select Gender</option>
+                            </select>
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*Email</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="form_control_1" asp-for="Email" placeholder="Enter Email">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*PhoneNumber</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="form_control_1" asp-for="PhoneNumber" placeholder="Enter PhoneNumber">
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="form_control_1">*Address</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="form_control_1" asp-for="address" placeholder="Enter Address">
+                            <span asp-validation-for="address" class="text-danger"></span>
+
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" class="btn btn-success" />
+                            <a class="btn btn-danger" asp-action="Index">Cancel</a>
+                            <br />
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- END CONTENT BODY -->
+</div>
+
+<!-- END CONTENT -->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

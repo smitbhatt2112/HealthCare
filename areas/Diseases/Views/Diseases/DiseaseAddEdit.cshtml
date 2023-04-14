@@ -1,0 +1,78 @@
+﻿@{
+   ViewData["Title"] = "Add Disease";
+   Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
+
+@using System.Data;
+@model HealthCare.Areas.Diseases.Models.DiseaseModel
+
+<div class="page-content-wrapper">
+    <!-- BEGIN CONTENT BODY -->
+    <div class="page-content">
+        <!-- BEGIN PAGE TITLE-->
+        <!-- END PAGE TITLE-->
+        <!-- END PAGE HEADER-->
+
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="row">
+                    <div class="caption font-green-haze col-md-10">
+                        <i class="icon-plus font-green"></i>
+                        <span class="caption-subject bold uppercase"> Add Disease</span>
+                    </div>
+                    <div class="caption font-green-haze" style="float:right">
+                        <a class="btn btn-success" asp-action="Index">Back to List</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <form role="form" class="form-horizontal" asp-area="Diseases" asp-controller="Diseases" asp-action="Save" enctype="multipart/form-data">
+                @Html.HiddenFor(x=>x.DiseaseID)
+                <div class="form-body">
+                    <div class="form-group form-md-line-input">
+
+                        <label class="col-md-2 control-label" for="form_control_1">*Disease Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control " id="form_control_1" asp-for="DiseaseName" placeholder="Enter Disease Name" autofocus>
+                            <span asp-validation-for="DiseaseName" class="text-danger"></span>
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+                 </div>
+
+
+                    
+
+                    
+                <br />
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" class="btn btn-success" />
+                            <a class="btn btn-danger" asp-action="Index">Cancel</a>
+                            <br />
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- END CONTENT BODY -->
+</div>
+
+<!-- END CONTENT -->
+@section Scripts {
+      @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+     }
+    }
+
+
