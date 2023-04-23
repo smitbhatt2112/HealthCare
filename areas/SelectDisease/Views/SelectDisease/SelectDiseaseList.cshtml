@@ -70,7 +70,7 @@
                                             <td>
                                                 <form method="post" asp-controller="SelectDisease" asp-action="Delete">
                                                     <!--fisrt input tag int value will be pass-->
-                                                    <input type="hidden" name="DiseaseID" value="@Convert.ToInt32(dr["SelectID"])" />
+                                                    <input type="hidden" name="SelectID" value="@Convert.ToInt32(dr["SelectID"])" />
                                                     <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete ')">Delete</button>
 
                                                 </form>

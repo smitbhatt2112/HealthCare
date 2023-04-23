@@ -71,7 +71,7 @@ namespace HealthCare.Controllers
                 }
                 if (HttpContext.Session.GetString("UserName") != null && HttpContext.Session.GetString("Password") != null)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Home",d);
                 }
             }
             return RedirectToAction("Index", "Home");

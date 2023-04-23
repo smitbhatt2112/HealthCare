@@ -15,9 +15,18 @@ namespace HealthCare.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(User_MasterModel d)
         {
-            return View();
+            //return View();
+            if (d.UserName == "Admin" && d.Password == "Admin")
+            {
+                return View();
+            }
+            else
+            {
+                return View("HomeClient");  
+            }
+
         }
 
         public IActionResult Privacy()
